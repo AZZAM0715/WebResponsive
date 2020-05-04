@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Giving Contact Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500|Gaegu:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+
+  </head>
+  <body ng-app="validationApp" ng-controller="mainController">
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Giving</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2 class="heading">Get In Touch</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row block-9">
+        <div class="col-md-6 pr-md-5">
+
+          <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+          <label>Name*</label>
+          <input type="text" id="fname" name="name" class="form-control" ng-model="user.name" required >
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+          <label>Email</label>
+          <input type="email" id="email" name="email" class="form-control" ng-model="user.email" required>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+          <label>Username</label>
+          <input type="text" id="subject" name="username" class="form-control" ng-model="user.username" required ng-minlength="3"ng-maxlength="20">
+            <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+        </div>
+
+         <!-- MESSAGE -->
+         <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+          <label>Message*</label>
+          <textarea name="message" id="message" cols="30" rows="7" class="form-control px-3 py-3"  ng-model="user.message" required></textarea>
+            <p ng-show="userForm.message.$invalid && !userForm.message.$pristine" class="help-block">Your Message is required.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </form>
+        
+        </div>
+
+        <div class="col-md-6" id="map1"></div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="mb-5">GIVING is an institution, facilitator and mediator to help the orphans and dhu'afa get their rights to be able to enjoy a life and education that deserves where they are today, GIVING is ready to synergize to all parties both institutionally and personally who want to contribute and real solutions in empowering orphans and dhu'afa and other general public.</p>
+          <p><a href="contact.html" class="btn btn-primary px-4 py-3">Join Volunteer</a></p>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Blog</h3>
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_1.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="donate.html">Give Meal A Day</a></h3>
+              <div class="meta">
+                <div><span class="icon-calendar"></span> April 09, 2020</a></div>
+                <div><a href="contact.html"><span class="icon-person"></span> Admin</a></div>
+                <div><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_2.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="gallery.html">Look at Us</a></h3>
+              <div class="meta">
+                <div><span class="icon-calendar"></span> April 10, 2020</a></div>
+                <div><a href="contact.html"><span class="icon-person"></span> Admin</a></div>
+                <div><span ></span> </a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="images/img_4.jpg" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="contact.html">Join As A Volunteers</a></h3>
+              <div class="meta">
+                <div><span class="icon-calendar"></span> April 08, 2020</a></div>
+                <div><a href="contact.html"><span class="icon-person"></span> Admin</a></div>
+                <div><span class="icon-chat"></span> 22</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="block-23">
+            <h3 class="heading-section">Contact Info</h3>
+              <ul>
+                <li><a href="contact.html"><span class="icon icon-map-marker"></span><span class="text">Jl. Kemang Utara No.21A, Bangka, Mampang Prapatan., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, 12730.</span></li>
+                <li><a href="contact.html"><span class="icon icon-phone"></span><span class="text">Telp. (021) 7182502 – WA. 0857 7211 6356</span></a></li>
+                <li><a href="https://mail.google.com/mail/"><span class="icon icon-envelope"></span><span class="text">info@giving.com</span></a></li>
+                <li><span class="icon icon-clock-o"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
+              </ul>
+            </div>
+        </div>
+        
+        
+      </div>
+      <div class="row pt-5">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart" aria-hidden="true"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <!-- validasi form -->
+  <script src="angular-1.2.6/angular.js"></script>
+  
+
+   <!-- VALIDASI -->
+  <script>
+
+  var today = new Date();
+
+  var validationApp = angular.module('validationApp', []);
+  // create angular controller
+  validationApp.controller('mainController', function ($scope) {
+  // function to submit the form after all validation has occurred
+    $scope.submitForm = function (isValid) {
+  // check to make sure the form is completely valid
+      if (isValid) {
+  alert('You are successfully made a Message \n\ date now : '+today+'');
+      }
+    };
+  });
+</script> 
+
+   <!-- Map -->
+  <script>
+  // koordinat dan zoom view peta
+  // Koordinat yang digunakan berupa latitude dan longitude,
+  var map = L.map('map1').setView([-6.2582341,106.822765], 17);
+  // ini adalah copyright, bisa dicopot tapi lebih baik kita hargai sang penciptanya ya :)
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a', 'b', 'c'],
+  }).addTo(map);
+  // ini adalah koordinat marker
+  L.marker([-6.2582341,106.822765]).addTo(map).bindPopup("<b>Selamat Datang!</b> Di GIVING FOUNDATION.").openPopup();
+  var popup = L.popup();
+  function onMapClick(e) {
+  popup
+  .setLatLng(e.latlng)
+  .setContent("Koordinat pada titik ini adalah " + e.latlng.toString())
+  .openOn(map);
+  }
+  map.on('click', onMapClick);
+</script> 
+    
+  </body>
+</html>

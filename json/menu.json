@@ -1,0 +1,67 @@
+{
+    "menu": [
+        {
+            "kategori": "donate",
+            "nama": "Jean Smith",
+            "deskripsi": "Donated 2 weeks ago.",
+            "harga": 1.155,
+            "gambar": "person_1.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "Christine Charles",
+            "deskripsi": "Donated 2 month ago.",
+            "harga": 157,
+            "gambar": "person_2.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "Albert Sluyter",
+            "deskripsi": "Donated 2 month ago.",
+            "harga": 534,
+            "gambar": "person_3.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "Andrew Holloway",
+            "deskripsi": "Donated 3 month ago.",
+            "harga": 2.555,
+            "gambar": "person_4.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "Niki Zefanya",
+            "deskripsi": "Donated 3 month ago.",
+            "harga": 534,
+            "gambar": "niki.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "Alexandra Daddario",
+            "deskripsi": "Donated 4 month ago.",
+            "harga": 2.567,
+            "gambar": "hl.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "David Alexander",
+            "deskripsi": "Donated 4 month ago.",
+            "harga": 1.155,
+            "gambar": "ji.jpg"
+        },
+        {
+            "kategori": "donate",
+            "nama": "Tylor Swift",
+            "deskripsi": "Donated 6 month ago.",
+            "harga": 15.253,
+            "gambar": "lor.jpg"
+        },
+        {
+           "kategori": "donate",
+            "nama": "Mollysa Claudia",
+            "deskripsi": "Donated 6 month ago.",
+            "harga": 764,
+            "gambar": "aku.jpg"
+        }  
+    ]
+}
